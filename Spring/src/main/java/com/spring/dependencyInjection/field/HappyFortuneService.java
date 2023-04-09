@@ -1,0 +1,13 @@
+package com.spring.dependencyInjection.field;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class HappyFortuneService implements FortuneService {
+
+	@Override
+	public String getDailyFortune() {
+		return "In a happy Fortune";
+	}
+
+}
