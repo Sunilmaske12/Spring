@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context" 
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+<!--  Define your beans here 
+  --> 
+  
+ 	 <bean name="student" class="com.springCore.ConstructorInjection.Student"> 
+ 	 	<constructor-arg name="id">
+ 	 		<value>1</value>
+ 	 	</constructor-arg>
+ 	 	<constructor-arg name="name">
+ 	 		<value>Sunil</value>
+ 	 	</constructor-arg>
+ 	 	<constructor-arg name="marks">
+ 	 		<value>90</value>
+ 	 	</constructor-arg>
+ 	 	<constructor-arg name="subject">
+ 	 		<list>
+ 	 			<value>DSGC</value>
+ 	 			<value>WCMC</value>
+ 	 			<value>UNIX-SHELL</value>
+ 	 			<value>MMS</value>
+ 	 		</list>
+ 	 	</constructor-arg>
+ 	 	<constructor-arg name="relative">
+ 	 		<map>
+ 	 			<entry key="Father" value="Giridhar"/>
+ 	 			<entry key="Friend" value="Aman"/>
+ 	 			<entry key="Brother" value="Anil"/>
+ 	 			<entry key="Sister" value="Pinki"/>
+ 	 		</map>
+ 	 	</constructor-arg>
+ 	 	<constructor-arg name="friends">
+ 	 		<set>
+ 	 			<value>Aman</value>
+ 	 			<value>Vishal</value>
+ 	 			<value>Rajendra</value>
+ 	 			<value>Payal</value>
+ 	 		</set>
+ 	 	</constructor-arg>
+ 	 	
+ 	 </bean>
+</beans>
