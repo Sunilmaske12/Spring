@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context" 
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+<!--  Define your beans here 
+  --> 
+ 	
+ 	<bean name="student" class="com.springCore.collection.setter.Student">
+ 		<property name="name" value="sunil"/>
+ 		<property name="subject">
+ 			<list>
+ 				<value>Math</value>
+ 				<value>Physics</value>
+ 				<value>WCMC</value>
+ 				<value>DSGC</value>
+ 			</list>
+ 		</property>
+ 		<property name="mob_nos">
+ 			<set>
+ 				<value>421</value>
+ 				<value>133</value>
+ 				<value>543</value>
+ 				<value>200</value>
+ 			</set>
+ 		</property>
+ 		<property name="marks">
+ 			<map>
+ 			<entry key="math" value="25"/>
+ 			<entry key="physics" value="26"/>
+ 			<entry key="MCA" value="30"/>
+ 			<entry key="WT" value="45"/>
+ 			</map>
+ 		</property>
+ 		<property name="detail">
+ 			<props>
+ 			 <prop key="name">Sunil</prop>
+ 			 <prop key="last_name">maske</prop>
+ 			 <prop key="class">final</prop>
+ 			</props>
+ 		</property>
+ 	</bean> 
+   
+  </beans>

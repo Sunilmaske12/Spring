@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context" 
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+<!--  Define your beans here 
+  --> 
+  
+ <!--  Bean 1  --> 
+  <bean name="student1" class="com.springCore.setterInjection.Student"> 
+  		<property name="Id">
+			  <value>1</value>		
+  		</property>
+  		<!-- OR
+  		<property name="Id" value="1" />
+  		 -->
+  		
+  		<property name="Name">
+			  <value>Sunil</value>		
+  		</property>
+  		<property name="Address">
+			  <value>Bhandara</value>		
+  		</property>
+  
+  </bean>
+  
+  <!--  Bean 2  using value as a attribute--> 
+     <bean name="student2" class="com.springCore.setterInjection.Student">
+     	<property name="Id" value="2" />
+     	<property name="Name" value="Anil" />
+     	<property name="Address" value="Nagpur" />
+     </bean>
+  
+   <!--  Bean 3  using p Schema as a attribute--> 
+     <bean name="student3" class="com.springCore.setterInjection.Student" p:id="3" p:Name="Ajay" p:Address="Delhi"/>
+    
+  </beans>
