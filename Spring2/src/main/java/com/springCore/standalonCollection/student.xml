@@ -17,7 +17,8 @@
  	<value>anil</value>
  	<value>aman</value>
  	<value>vishal</value>
- </util:list>	
+ </util:list>
+ 
  
  	<bean name="student" class="com.springCore.standalonCollection.Student">
  		<property name="friends" ref="bestFriend" /> 		

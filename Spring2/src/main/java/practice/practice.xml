@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context" 
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean name="practice1" class="practice.Practice1">
+	<constructor-arg  name="a" value="1"/>
+	<constructor-arg  name="b" value="I am sunil"/>
+	<property name="Practice2"><ref bean="practice2"/></property>
+</bean> 
+ 
+ <bean name="practice2" class="practice.Practice2">
+ 	<property name="c" value="2.67" />
+ 	<property name="subject">
+ 		<list>
+ 			<value>math</value>
+ 			<value>phy</value>
+ 			<value>che</value>
+ 		</list>
+ 	</property>
+ 	<property name="marks">
+ 		<set>
+ 			<value>23</value>
+ 			<value>65</value>
+ 			<value>90</value>
+ 		</set>
+ 	</property>
+ 	<property name="submarks">
+ 		<map>
+ 			<entry key="math" value="23" />
+ 			<entry key="phy" value="65" />
+ 			<entry key="che" value="73" />
+ 		</map>
+ 	</property>
+ 	<property name="prop">
+ 		<props>
+ 			<prop key="1">Sunil</prop>
+ 			<prop key="2">Ram</prop>
+ 			<prop key="3">Sham</prop>
+ 		</props>
+ 	</property>
+ 	
+ </bean>
+  </beans>

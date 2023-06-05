@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context" 
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="practice.SetterInjectionPara" name="setterInjection1">
+		<property name="id" >
+				<value>1</value>
+		</property>
+		<property name="name" >
+				<value>Sunil</value>
+		</property>
+		<property name="address" >
+				<value>Khurshipar</value>
+		</property>
+	</bean>	
+
+	<bean name="setterInjection2" class="practice.SetterInjectionPara">
+		<property name="id" value="2" />
+		<property name="name" value="Anil" />
+		<property name="address" value="Gunthara" />
+	</bean>
+	
+	<bean name="setterInjection3" class="practice.SetterInjectionPara" p:id="3" p:name="ajay" p:address="rajegaon"/>
+      
+ 	<bean name="marks" class="practice.SetterInjectionPara">
+ 		<property name="marks">
+ 			<list>
+ 				<value>23</value>
+ 				<value>65</value>
+ 				<value>35</value>
+ 				<value>6</value>
+ 				<value>12</value>
+ 				<value>94</value>
+ 			</list>
+ 		</property>
+ 	</bean>
+ 	
+ 	<bean name="subject" class="practice.SetterInjectionPara">
+ 		<property name="subject">
+ 			<list>
+ 				<value>English</value>
+ 				<value>Marathi</value>
+ 				<value>physics</value>
+ 				<value>chemistry</value>
+ 				<value>Biology</value>
+ 				<value>History</value>
+ 			</list>
+ 		</property>
+ 		</bean>
+ 		
+ 		<bean name="students" class="practice.SetterInjectionPara">
+ 		<property name="students">
+ 			<map>
+ 				<entry key="mar" value="23"/>
+ 				<entry key="Eng" value="53"/>
+ 				<entry key="Math" value="85"/>
+ 				<entry key="Sci" value="54"/>
+ 			</map>
+ 		</property>
+ 	    </bean>
+ 	    
+ 	    <bean name="myAddress1"  class="practice.SetterInjectionAddress">
+ 	    	<property name="town" value="Khurshipar" />
+ 	    	<property name="distict" value="Bhandara" />
+ 	    	<property name="state" value="Maharashtra" />
+ 	    </bean>
+ 	    
+ 	
+ </beans>
