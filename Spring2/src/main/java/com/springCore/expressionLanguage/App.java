@@ -8,7 +8,7 @@ public class App {
 
 	public static void main(String[] args) {
 		ApplicationContext context=new ClassPathXmlApplicationContext("com/springCore/expressionLanguage/configSpEL.xml");
-		SpEL spel=context.getBean("expression", SpEL.class);
+		SpEL spel=context.getBean("expression123", SpEL.class);
 		System.out.println(spel);
 		((AbstractApplicationContext) context).close();
 	}

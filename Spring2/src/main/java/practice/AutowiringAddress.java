@@ -12,6 +12,10 @@ public class AutowiringAddress {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	@Override
+	public String toString() {
+		return "AutowiringAddress [town=" + town + ", state=" + state + "]";
+	}
 	
 	
 }

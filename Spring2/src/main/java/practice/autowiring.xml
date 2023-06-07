@@ -7,12 +7,12 @@
  xsi:schemaLocation="http://www.springframework.org/schema/beans
   http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context.xsd">
-
+<context:annotation-config/>
+  
 <bean name="address" class="practice.AutowiringAddress">
 	<constructor-arg value="Khu" />
 	<constructor-arg value="MH" />
 </bean>
 
-<bean name="autowiring1" class="practice.AutowiringPara" autowire="byName" />
-
+<bean name="autowiring1" class="practice.AutowiringPara"/>
  </beans>
