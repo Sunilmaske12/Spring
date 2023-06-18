@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context" 
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+<!--  Define your beans here 
+  --> 
+  
+  	<bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/springORM" />
+		<property name="username" value="root" />
+	</bean>
+  	
+  	<bean name="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+  		<property name="dataSource" ref="dataSource"/>
+  		<property name="mappingResources" >
+  			<list>
+  				<value>Student.hbm.xml</value>
+  			</list>
+  		</property>
+  		<property name="hibernateProperties" >
+  			<props>
+  				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</prop>
+  				<prop key="hibernate.show_sql">true</prop>
+  				<prop key="hibernate.hbm2ddl.auto">update</prop>
+  			</props>
+  		</property>
+  		
+  	</bean>
+  	<!-- localSessionFactoryBean is a implementation class of sessionFactory -->
+  
+  	<bean name="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate" >
+  	 	<property name="sessionFactory" ref="sessionFactory" /> 
+  	</bean>
+  	
+  	<bean name="studentDao" class="com.springORM.entity.Student">
+  		<property name="hibernateTemplate" ref="hibernateTemplate" />
+  	</bean>
+    
+  </beans>

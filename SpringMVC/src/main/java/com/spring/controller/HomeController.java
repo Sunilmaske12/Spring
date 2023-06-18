@@ -34,4 +34,26 @@ public class HomeController {
 		System.out.println("In a About page controller");
 		return "about";
 	}
+	
+	
+	//sending data through ModelAndView
+	//here we will set page name by addAttribute method
+	@RequestMapping("/help")
+	public ModelAndView help()
+	//Modal is a predefine object
+	{	
+		ModelAndView model = new ModelAndView();
+		model.addObject("name", "Raj");
+		model.addObject("Age", 67);
+		model.setViewName("help");
+		System.out.println("In a help page controller");
+		return model;
+	}
+	
+	@RequestMapping("/jstl")
+	public String JSP_Expression(Model model) {
+		model.addAttribute("name", "Akshay");
+		model.addAttribute("age", 54);
+		return "JSP_Expression";
+	}
 }
