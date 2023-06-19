@@ -1,4 +1,5 @@
 <%@page import="java.util.List"%>
+<%@page isELIgnored="false"%>
 <html>
 	<head>
 		<title>Index page</title>
@@ -10,6 +11,7 @@
 	%>
 		<h1>Welcome Mr.<%=name %></h1>
 		<h2>Your age is <%=age %></h2>
+		${name}
 		<h2>You are in a homecontrol view: index page</h2>
 		<h3>Your friend list is: </h3>
 		<% for(String st:friend){%><h4>
