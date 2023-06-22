@@ -3,9 +3,12 @@ package com.spring.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -56,4 +59,18 @@ public class HomeController {
 		model.addAttribute("age", 54);
 		return "JSP_Expression";
 	}
+	
+	@RequestMapping(path="/search")
+	public String search() {
+		return "search";
+	}
+	
+	@RequestMapping(path="/searchSubmit", method = RequestMethod.POST)
+	public String submit(HttpServletRequest req,Model model) {
+		String name = req.getParameter("name");
+		System.out.println(name);
+		model.addAttribute("name", name);
+		return "searchSubmit";
+	}
+	
 }

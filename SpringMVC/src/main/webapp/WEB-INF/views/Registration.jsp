@@ -25,6 +25,7 @@
 			<label>Email</label>
 			<input type="email" name="Email">
 			<button type="submit">Traditional Submit</button>
+			
 		</form>
 		<br><br><br>
 		<form action="newRegistration" method="post">

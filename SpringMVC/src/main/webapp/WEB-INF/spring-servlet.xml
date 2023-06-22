@@ -64,4 +64,12 @@
   	<!-- To resolve multipart resolver -->
   	<bean name="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
   
+  	<!-- Interceptor -->
+  	<mvc:interceptors>
+  		<mvc:interceptor>
+  			<mvc:mapping path="/searchSubmit" />
+  			<bean class="com.spring.controller.InterceptorController" />
+  		</mvc:interceptor>
+  	</mvc:interceptors>
+  
  </beans>
